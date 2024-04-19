@@ -1,77 +1,55 @@
 ---
 
-# Text Analysis
+## Data Extraction and NLP
 
-This document outlines the methodology adopted for performing text analysis to derive sentimental opinion, sentiment scores, readability, passive words, personal pronouns, and more.
+**1. Objective**:
+The objective of this assignment is to extract textual data articles from the given URL and perform text analysis to compute variables that are explained below.
 
-## Table of Contents
+**2. Data Extraction**:
+- **Input.xlsx**: For each article in the input.xlsx file, extract the article title and text. Save each extracted article in a text file with URL_ID as its filename. Ensure the program extracts only the article title and text, excluding the website header, footer, or any other irrelevant content.
+- **Note**: Use Python programming and libraries such as BeautifulSoup, Selenium, or Scrapy for data crawling.
 
-1. [Sentimental Analysis]
-   - [Cleaning using Stop Words Lists]
-   - [Creating dictionary of Positive and Negative words]
-   - [Extracting Derived variables]
-2. [Analysis of Readability]
-3. [Average Number of Words Per Sentence]
-4. [Complex Word Count]
-5. [Word Count]
-6. [Syllable Count Per Word]
-7. [Personal Pronouns]
-8. [Average Word Length]
+**3. Data Analysis**:
+- **Python Programming**: Perform textual analysis for each extracted article using Python.
+- **Variables**: Compute the variables defined in the "Text Analysis.docx" document, including:
+   1. Positive Score
+   2. Negative Score
+   3. Polarity Score
+   4. Subjectivity Score
+   5. Average Sentence Length
+   6. Percentage of Complex Words
+   7. Fog Index
+   8. Average Number of Words Per Sentence
+   9. Complex Word Count
+   10. Word Count
+   11. Syllable Per Word
+   12. Personal Pronouns
+   13. Average Word Length
 
-## Sentimental Analysis
+**4. Output Data Structure**:
+- **Output Variables**: 
+   1. All input variables in "Input.xlsx"
+   2. Positive Score
+   3. Negative Score
+   4. Polarity Score
+   5. Subjectivity Score
+   6. Average Sentence Length
+   7. Percentage of Complex Words
+   8. Fog Index
+   9. Average Number of Words Per Sentence
+   10. Complex Word Count
+   11. Word Count
+   12. Syllable Per Word
+   13. Personal Pronouns
+   14. Average Word Length
+- Refer to the "Output Data Structure.xlsx" spreadsheet for the output format.
 
-Sentimental analysis involves determining whether a piece of writing is positive, negative, or neutral. The algorithm designed for financial texts consists of the following steps:
-
-### Cleaning using Stop Words Lists
-
-Stop Words Lists are utilized to clean the text, thereby enabling sentiment analysis by excluding the words found in the Stop Words List.
-
-### Creating a dictionary of Positive and Negative words
-
-A Master Dictionary is employed to create a dictionary of Positive and Negative words. Only words not found in the Stop Words Lists are added to the dictionary.
-
-### Extracting Derived variables
-
-The text is converted into a list of tokens using the NLTK tokenize module, which are then used to calculate the following variables:
-
-- Positive Score
-- Negative Score
-- Polarity Score
-- Subjectivity Score
-
-## Analysis of Readability
-
-Readability analysis is calculated using the Gunning Fox index formula, which includes:
-
-- Average Sentence Length
-- Percentage of Complex words
-- Fog Index
-
-## Average Number of Words Per Sentence
-
-This is calculated using the formula:
-Average Number of Words Per Sentence = total number of words / total number of sentences
-
-## Complex Word Count
-
-Complex words are those containing more than two syllables.
-
-## Word Count
-
-The total number of cleaned words present in the text is calculated by removing stop words and any punctuations like ? ! , . before counting.
-
-## Syllable Count Per Word
-
-The number of syllables in each word of the text is counted by counting the vowels present in each word, handling exceptions like words ending with "es" or "ed".
-
-## Personal Pronouns
-
-To calculate Personal Pronouns mentioned in the text, regex is used to find the counts of specific words. Special care is taken so that country names are not included in the count.
-
-## Average Word Length
-
-Average Word Length is calculated by summing the total number of characters in each word and dividing by the total number of words.
+**Make sure your submission contains**:
+- A .py file
+- Output in CSV or Excel file format as specified
+- Instructions:
+   1. Explaining your approach to the solution
+   2. How to run the .py file to generate output
+   3. Include all dependencies required
 
 ---
-
-This README provides an overview of the text analysis methodology and the various metrics derived from the analysis.
